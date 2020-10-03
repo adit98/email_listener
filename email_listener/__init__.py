@@ -378,7 +378,7 @@ class EmailListener:
                 # Process the new emails
                 msgs = self.scrape(move=move, unread=unread, delete=delete)
                 # Run the process function
-                process_func(self, msgs)
+                process_func(self, msgs, **kwargs)
                 # Restart idling
                 self.server.idle()
         # Stop idling
